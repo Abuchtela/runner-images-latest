@@ -75,7 +75,7 @@ jobs:
       - name: Compress SBOM file
         run: Compress-Archive sbom.json sbom.json.zip
       #Upload artifact action
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: sbom-${{ github.event.client_payload.agentSpec }}-${{ github.event.client_payload.imageVersion }}
           path: sbom.json.zip
